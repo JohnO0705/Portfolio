@@ -335,15 +335,16 @@ a{
 /*Contact Container for phones*/
 @media (max-width: 700px) {
     #contact {
-        padding: 5vh 5vh 2vh 5vh;
+        margin-top: -20vh;
+        padding: 10vh 5vh 2vh 5vh;
         display: flex;
     }
 
     #contact_title {
         color: white;
         background-color: transparent;
-        margin-top: -5vh;
-        padding-right: 5vh;
+        margin-top: -3vh;
+        padding-right: 10vh;
         float: left;
     }
 
