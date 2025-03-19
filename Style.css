@@ -7,6 +7,12 @@
     scrollbar-width: none;
 }
 
+@media (max-width: 700px){
+    *{
+        overflow-x: hidden;
+    }
+}
+
 a{
     background-color: transparent;
 }
