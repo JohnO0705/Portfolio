@@ -145,6 +145,7 @@ a{
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: inset 0vh 15vh 50vh -5vh black;
+    padding-bottom: 15vh;
 }
 
 #project_title {
@@ -155,8 +156,10 @@ a{
 
 #project_cards {
     background-color: transparent;
-    padding: 10vh 5vh 50vh 20vh;
+    padding: 10vh 25vh 5vh 20vh;
+    justify-content: space-between;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #project_inner_title {
@@ -178,29 +181,24 @@ a{
 }
 
 #project1 {
-    position: relative;
     background: rgb(17, 17, 17);
-    padding: 0vh 0vh 1vh 0vh;
     border-radius: 10px;
     max-width: 30vh;
-    margin-right: 20vh;
+    margin-top: 5dvh;
 }
 
 #project2 {
-    position: relative;
     background: rgb(17, 17, 17);
-    padding: 0vh 0vh 1vh 0vh;
     border-radius: 10px;
     max-width: 30vh;
-    margin-right: 20vh;
+    margin-top: 5dvh;
 }
 
 #project3 {
-    position: relative;
     background: rgb(17, 17, 17);
-    padding: 0vh 0vh 1vh 0vh;
     border-radius: 10px;
     max-width: 30vh;
+    margin-top: 5dvh;
 }
 
 #project1_img {
@@ -223,15 +221,16 @@ a{
 
 #project_skills {
     background-color: transparent;
-    display:inline-flex;
+    overflow: auto;
 }
 
 #skill_container {
     background-color: transparent;
     border: 3px solid white;
     padding: 1vh;
-    margin: 0 0 0 2vh;
+    margin: 0vh 0 2vh 2vh;
     border-radius: 50px;
+    float: left;
 }
 
 #skill_desc {
@@ -246,39 +245,35 @@ a{
         padding-bottom: 40vh;
     }
 
+    #project_cards{
+        padding-top: 5vh;
+    }
+
     #project_title {
         color: white;
         background-color: transparent;
         margin-left: 5vh;
     }
 
-    #project_cards {
-        display: contents;
-        align-items: flex-start;
-    }
-
     #project1 {
-        position: relative;
         background: rgb(17, 17, 17);
-        padding: 0vh 0vh 1vh 0vh;
-        margin: 5vh auto;
+        padding: 0vh 0 1vh 0vh;
+        margin: 5vh 3vh 0;
         border-radius: 10px;
     }
     
     #project2 {
-        position: relative;
         background: rgb(17, 17, 17);
         padding: 0vh 0vh 1vh 0vh;
-        margin: 5vh auto;
+        margin: 5vh 3vh 0;
         border-radius: 10px;
         max-width: 30vh;
     }
     
     #project3 {
-        position: relative;
         background: rgb(17, 17, 17);
         padding: 0vh 0vh 1vh 0vh;
-        margin: 5vh auto;
+        margin: 5vh 3vh 0;
         border-radius: 10px;
         max-width: 30vh;
     }
@@ -347,7 +342,6 @@ a{
     #contact {
         margin-top: -20vh;
         padding: 10vh 5vh 2vh 5vh;
-        display: flex;
     }
 
     #contact_title {
@@ -365,13 +359,16 @@ a{
 
     #email {
         width: 100%; /* Full width */
+        float: left;
     }
 
     #socials {
         align-items: flex-start; /* Left-align on mobile */
+        float: left;
     }
 
     #logo_container {
         justify-content: flex-start; /* Align icons left */
+        float: left;
     }
 }
