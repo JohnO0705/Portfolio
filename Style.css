@@ -21,19 +21,69 @@ a{
 /*Home Page*/
 
 #home_page {
-    background-image: url(First_Background.jpg);
+    background-image: url(grey-background.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-position: center 100%;
     background-repeat: no-repeat;
     height: 100vh;
-    box-shadow: inset 0vh -15vh 50vh -5vh black;
+}
+
+#mySidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#mySidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#mySidepanel a:hover {
+  color: #f1f1f1;
+}
+
+#mySidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+#hamburger_button {
+    float: right;
+    cursor: pointer;
+    margin: 5rem;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+#hamburger {
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    border-radius: 20px;
 }
 
 #name {
     text-align: center;
     background-color: transparent;
     padding-top: 35vh;
-    color: #3c57ed;
+    color: aliceblue;
     font-size: 15vh;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -41,7 +91,7 @@ a{
 #job_title {
     text-align: center;
     background-color: transparent;
-    color: #3c57ed;
+    color: aliceblue;
     font-size: 4vh;
     font-family: 'Times New Roman', Times, serif;  
 }
@@ -59,6 +109,7 @@ a{
 
 /*About Container*/
 #about_section {
+    padding-top: 10rem;
     display: flex;                 /* flexbox layout */
     justify-content: center;       /* center horizontally */
     align-items: center;           /* center vertically */
@@ -72,8 +123,8 @@ a{
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 255, 255, 0.3);
-    box-shadow: 0 0 25px rgba(0, 200, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.589);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.555);
     text-align: center;
 }
 
@@ -84,6 +135,7 @@ a{
 }
 
 #container_desc {
+    padding: 2rem 0;
     color: white;
     background: transparent;   
 }
@@ -116,13 +168,20 @@ a{
 }
 
 /*Projects Container*/
+#projects_section {
+    padding: 10rem;
+    display: flex;                 /* flexbox layout */
+    align-items: center;           /* center vertically */
+    background: transparent;       /* keep your black theme */
+}
+
 #projects_container {
-    background-image: url(Background-My.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: inset 0vh 15vh 50vh -5vh black;
-    padding-bottom: 15vh;
+    width: 95%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.589);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.555);
 }
 
 #project_title {
@@ -133,10 +192,11 @@ a{
 
 #project_cards {
     background-color: transparent;
-    padding: 10vh 25vh 5vh 20vh;
+    padding: 0vh 25vh 5vh 20vh;
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 #project_inner_title {
@@ -159,6 +219,8 @@ a{
 
 #project1 {
     background: rgb(17, 17, 17);
+    border: 1px solid rgba(255, 255, 255, 0.589);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.555);
     border-radius: 10px;
     max-width: 30vh;
     margin-top: 5dvh;
@@ -166,6 +228,8 @@ a{
 
 #project2 {
     background: rgb(17, 17, 17);
+    border: 1px solid rgba(255, 255, 255, 0.589);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.555);
     border-radius: 10px;
     max-width: 30vh;
     margin-top: 5dvh;
@@ -173,15 +237,16 @@ a{
 
 #project3 {
     background: rgb(17, 17, 17);
+    border: 1px solid rgba(255, 255, 255, 0.589);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.555);
     border-radius: 10px;
     max-width: 30vh;
     margin-top: 5dvh;
 }
-
 #project1_img {
     background-color: aliceblue;
     padding: 3vh 8vh 3vh 8vh;
-    width: 30vh;
+    width: 100%;
     height: 15vh;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -189,8 +254,17 @@ a{
 
 #project2_img {
     background-color: aliceblue;
-    padding: 3vh 8vh 3vh 8vh;
-    width: 30vh;
+    padding: 3vh 10vh 3vh 10vh;
+    width: 100%;
+    height: 15vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#project3_img {
+    background-color: aliceblue;
+    padding: 3vh 10vh 3vh 10vh;
+    width: 100%;
     height: 15vh;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -203,7 +277,7 @@ a{
 
 #skill_container {
     background-color: transparent;
-    border: 3px solid white;
+    border: 2px solid white;
     padding: 1vh;
     margin: 0vh 0 2vh 2vh;
     border-radius: 50px;
@@ -212,7 +286,7 @@ a{
 
 #skill_desc {
     background-color: transparent;
-    font-size: 1.5vh;
+    font-size: 1.25vh;
     color: white;
 }
 
@@ -258,29 +332,37 @@ a{
 
 /*Contact Container*/
 #contact {
-    padding: 5vh 5vh 2vh 10vh;
+    float: right;
+    align-items: flex-start;
+    padding: 5vh 15vh 0vh 0vh;
     margin-top: -15vh;
     max-width: 100%;
     background: transparent;
 }
 
-#contact_title {
+#contact_home_title {
     color: white;
-    background-color: transparent;
-    float: left;
-    padding-right: 45vh;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #not_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;       
+    width: 100%;                   
+    gap: 2rem; 
     background-color: transparent;
 }
 
 #socials {
     background-color: transparent;
     color: white;
-    max-width: 65vh;
-    float: left;
-    padding-right: 45vh;
+    max-width: 60vh;
+    max-width: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #contact_inner_title {
@@ -305,13 +387,15 @@ a{
 #email {
     background-color: transparent;
     color: white;
-    float: left;
-    max-width: 60vh;
+    max-width: 65vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #email_desc {
     background-color: transparent;
-
+    margin-bottom: 1vh;
 }
 
 /*Contact Container for phones*/
@@ -348,4 +432,143 @@ a{
         justify-content: flex-start; /* Align icons left */
         float: left;
     }
+}
+
+/* Contact Page Stylesheet */
+
+#contact_page {
+    background-image: url(grey-background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#contact_mySidepanel  {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#contact_mySidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#contact_mySidepanel a:hover {
+  color: #f1f1f1;
+}
+
+#contact_mySidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+#contact_hamburger_button {
+    float: right;
+    cursor: pointer;
+    margin: 5rem;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    height: 2.2rem;
+}
+
+#contact_hamburger {
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    margin: 3px 0;
+    border-radius: 20px;
+}
+
+#contact_page_section {
+    background-color: transparent;
+    height: auto;
+    margin: auto;
+    padding-left: 10rem;
+}
+
+#contact_page_container {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact_title {
+    font-size: 80px;
+    color: white;
+    padding: 2rem;
+    background-color: transparent;
+}
+
+#contact_links {
+    background-color: transparent;
+    padding: 2rem;
+    display: flex;
+    box-shadow: 0 -16px 1px -15px grey;
+    align-items: center;
+}
+
+#socials_title {
+    background-color: transparent;
+    color: white;
+    font-size: 50px;
+    padding-bottom: 1rem;
+}
+
+#links_container {
+    background-color: transparent;
+}
+
+#contact_logo {
+    background-color: transparent;
+    box-shadow: 16px 0px 1px -15px grey;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email_title {
+    background-color: transparent;
+    color: white;
+    font-size: 50px;
+    padding-bottom: 1rem;
+}
+#contact_email {
+    background-color: transparent;
+    color: white;
+    padding-left: 2rem;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact_email p {
+    background-color: transparent;
+    padding-bottom: 5px;
 }

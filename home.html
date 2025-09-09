@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>John's Website</title>
+        <link rel="stylesheet" href="Style.css" />
+    </head>
+    <body>
+        <div id="main">
+            <div id="home_page">
+                <div id="mySidepanel" class="sidepanel">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="home.html">Home</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="#">Resume</a>
+                </div>
+
+                <button id="hamburger_button" onclick="openNav()">
+                    <div id="hamburger"></div>
+                    <div id="hamburger"></div>
+                    <div id="hamburger"></div>
+                </button>
+
+                <script>
+                    function openNav() {
+                        document.getElementById("mySidepanel").style.width = "250px";
+                    }
+
+                    function closeNav() {
+                        document.getElementById("mySidepanel").style.width = "0";
+                    }
+                </script>
+
+                <h2 id="name">John Ortiz JR</h2>
+                <h3 id="job_title">Computer Science Undergraduate Student</h3>
+            </div>
+            <div id="about_section">
+                <div id="about_container">
+                    <h2 id="container_title">About</h2> 
+
+                    <p id="container_desc">I am currently a student at Illinois State University majoring in Computer Science. My interests are in Robotics and Software Development.
+                        I would like to use my skills to improve lives of others.</p>
+                </div>
+            </div>
+            <div id="projects_section">
+                <div id="projects_container">
+                    <h2 id="project_title">Projects</h2>
+
+                    <div id="project_cards">
+                        
+                        <div id="project1">
+                            <img id="project1_img" src="arduino_logo.png">
+                            <a href="https://github.com/JohnO0705/SecurityCamera"><h3 id="project_inner_title">Security Device</h3></a>
+                            <p id="project_desc">Built a device that detects motion and sends an image to discord while lighting up.</p>
+
+                            <div id="project_skills">
+                                <div id="skill_container">
+                                    <p id="skill_desc">C++</p>
+                                </div>
+                                <div id="skill_container">
+                                    <p id="skill_desc">Arduino</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="project2">
+                            <img id="project2_img" src="robotic-arm.png">
+                            <h3 id="project_inner_title">Robotic Arm</h3>
+                            <p id="project_desc">Developed a robotic arm with integrated hand-tracking technology to enable precise, real-time gesture-based control.</p>
+
+                            <div id="project_skills">
+                                <div id="skill_container">
+                                    <p id="skill_desc">C++</p>
+                                </div>
+
+                                <div id="skill_container">
+                                    <p id="skill_desc">Pyhon</p>
+                                </div>
+
+                                <div id="skill_container">
+                                    <p id="skill_desc">Mediapipe</p>
+                                </div>
+
+                                <div id="skill_container">
+                                    <p id="skill_desc">OpenCV</p>
+                                </div>
+
+                                <div id="skill_container">
+                                    <p id="skill_desc">GitHub</p>
+                                </div>
+
+                                <div id="skill_container">
+                                    <p id="skill_desc">Arduino</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="project3">
+                            <img id="project3_img" src="python.png">
+                            <h3 id="project_inner_title">Fantasy Football Web Scraper</h3>
+                            <p id="project_desc">Built a fantasy football web scraper that automates data collection and analysis to support informed decision-making and strategy development.</p>
+
+                            <div id="project_skills">
+                                <div id="skill_container">
+                                    <p id="skill_desc">Pyhon</p>
+                                </div>
+
+                                <div id="skill_container">
+                                    <p id="skill_desc">React</p>
+                                </div>
+
+                                <div id="skill_container">
+                                    <p id="skill_desc">Selenium</p>
+                                </div>
+
+                                <div id="skill_container">
+                                    <p id="skill_desc">SQLite</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <a id="contact_home_title" href="contact.html">Contact Me</a>
+            </div>
+        </div>
+    </body>
+</html>
